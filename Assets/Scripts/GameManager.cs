@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using GoogleMobileAds.Api;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class GameManager : MonoBehaviour
     public GameObject lastBackground;
     public GameObject scoreTextFinal;
     public GameObject highscoreText;
-    public GameObject banner;
+    public GameObject bannerTop;
+    public GameObject bannerBottom;
     public AudioSource audioButton;
     public GameObject[] viruses;
     public GameObject[] borders;
@@ -49,7 +51,8 @@ public class GameManager : MonoBehaviour
         }
         StartCoroutine(waitToFade());
         if(firstLoad) {
-            banner.GetComponent<Banner>().RequestBanner();
+            bannerTop.GetComponent<Banner>().RequestBanner();
+            bannerBottom.GetComponent<Banner>().RequestBanner();
             firstLoad = false;
         }
     }
@@ -77,7 +80,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void retry() {
-        banner.GetComponent<Banner>().OnDestroy();
+        bannerTop.GetComponent<Banner>().OnDestroy();
+        bannerBottom.GetComponent<Banner>().OnDestroy();
         firstLoad = true;
         audioButton.Play();
         lastBackground.SetActive(true);

@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 148025910}
   - component: {fileID: 148025909}
   m_Layer: 0
-  m_Name: Banner
+  m_Name: BannerTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -913,6 +913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1934e88dcf3f045439c807c846a33f18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  location: 1
 --- !u!4 &148025910
 Transform:
   m_ObjectHideFlags: 0
@@ -5964,7 +5965,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 85e7b54ae35ee974e8988b87170855de, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.75
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6060,7 +6061,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a6c0114f4e13cc8449292b980232ebdd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6156,7 +6157,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 425eba6c535346246a472289b46b2ab3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.25
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8515,7 +8516,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &712322746
@@ -10204,6 +10205,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1271134536}
+--- !u!1 &1117888584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1117888586}
+  - component: {fileID: 1117888585}
+  m_Layer: 0
+  m_Name: BannerBottom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1117888585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117888584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1934e88dcf3f045439c807c846a33f18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  location: 0
+--- !u!4 &1117888586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117888584}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1142264366
 GameObject:
   m_ObjectHideFlags: 0
@@ -13714,7 +13759,8 @@ MonoBehaviour:
   lastBackground: {fileID: 733703441}
   scoreTextFinal: {fileID: 1760723051}
   highscoreText: {fileID: 1722494249}
-  banner: {fileID: 148025908}
+  bannerTop: {fileID: 148025908}
+  bannerBottom: {fileID: 1117888584}
   audioButton: {fileID: 1960465453}
   viruses:
   - {fileID: 1894637960}
@@ -13767,7 +13813,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 858c86f814504554aad7290ac8a333d3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.75
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
