@@ -5,5 +5,3 @@ Juego para Android estilo endless run, consiste en moverse de lado a lado esquiv
 ## Realizado con
 - C#
 - Unity
-- Android
-- Android Studio
